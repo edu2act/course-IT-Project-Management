@@ -40,4 +40,22 @@
 
 31.撤销相关的命令git reset/git checkout回顾
 
-32.远程相关命令git remote
+32.远程相关命令
+git remote
+git remote add <shortname> <url>
+git remote -v
+git remote show xx
+git remote rename xx yy
+git remote rm zz
+
+git fetch [remote-name]
+git pull
+git push origin master
+
+33.git 标签
+git tag
+git tag [tag] 轻量标签
+git tag -a [tag] -m "my tag" 注释标签
+git push origin [tagname]
+git push origin --tags 推送多个标签
+git checkout -b [branchname] [tagname]
