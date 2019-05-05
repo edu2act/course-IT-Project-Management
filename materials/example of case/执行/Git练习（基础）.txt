@@ -1,0 +1,61 @@
+1.创建本地仓库 git init
+2.查看当前状态 git status
+3.新建test1.txt文件并编辑文件
+4.通过添加对其进行版本跟踪 git add ...
+5.查看当前状态
+6.完成第一次提交 git commit ...
+
+7.创建test2.txt文件并编辑文件
+8.通过添加对其进行版本跟踪 git add ...
+9.取消对test2.txt文件的跟踪 git reset HEAD <file> ...
+
+10.创建test3.txt文件并编辑文件
+11.通过添加对其进行版本跟踪 git add
+12.此时修改test3.txt文件，然后再次查看状态观察有什么变化 git status
+13.通过git rm --cached test3.txt -f来取消对test3.txt的跟踪
+
+14.创建test4.txt文件并编辑文件
+15.通过添加对其进行版本跟踪 git add ...
+16.完成test4.txt文件的第一次提交 git commit ...
+17.对test4.txt文件进行编辑
+18.查看当前状态 git status
+19.恢复到上一状态 git checkout ...
+
+20.编辑test4.txt 并查看工作区和暂存区的差别 git diff test4.txt
+21.将test4.txt添加到暂存区后，查看暂存区与如git库区别 git diff --staged test4.txt
+
+22.编辑test4.txt快速修改和提交text4.txt通过 git commit -a -m 
+
+23.创建test5.txt文件并编辑文件,添加后完成提交
+24.通过git rm test5.txt删除
+
+25.再次查看状态 git status查看工作区和仓库中test5.txt的状态，思考如何彻底删除和恢复
+26.若通过reset和checkout恢复后，如何一次性彻底删除？git rm test5.txt -f
+27.若只删除暂存区（比如不小心添加静态库到暂存区，希望把暂存区内删掉，但工作区不删除），用git rm --cached test5.txt
+
+28.创建test6.txt文件并编辑文件,添加后完成提交
+29.通过git mv 来实现文件的移动，注意重命名相当于实现了两个操作（删除和新建）
+
+30.查看之前版本控制的历史记录 git log 可添加数字参数-n 对比参数-p等
+
+31.撤销相关的命令git reset/git checkout回顾
+
+32.远程相关命令
+git remote
+git remote add <shortname> <url>
+git remote -v
+git remote show xx
+git remote rename xx yy
+git remote rm zz
+
+git fetch [remote-name]
+git pull
+git push origin master
+
+33.git 标签
+git tag
+git tag [tag] 轻量标签
+git tag -a [tag] -m "my tag" 注释标签
+git push origin [tagname]
+git push origin --tags 推送多个标签
+git checkout -b [branchname] [tagname]
